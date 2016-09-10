@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "message": "Hi!"
+    },
+    {
+      "id": 2,
+      "message": "Oh, hello there!"
+    },
+    {
+      "id": 3,
+      "message": "Good to see you again!"
+    },
+    {
+      "id": 4,
+      "message": "You as well!"
+    },
+    {
+      "id": 5,
+      "message": "What are you up to?"
+    }
+  ]
+}
