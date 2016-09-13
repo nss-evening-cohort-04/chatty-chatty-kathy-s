@@ -1,3 +1,7 @@
 body {
   background: skyblue;
 }
+
+textarea {
+  border: 1px solid black;
+}
