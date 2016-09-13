@@ -5,8 +5,8 @@ var Chatty = (function(addMessage) {
   var messageDiv;
 
   addMessage.getMessages = function(data) {
-    for (var j = 0; j < 5; j++) {
-      messagesArray.push(data.messages[j].message);
+    for (var i = 0; i < 5; i++) {
+      messagesArray.push(data.messages_list[i].message);
     }
     console.log(messagesArray);
     addMessage.displayMessages();
@@ -20,7 +20,6 @@ var Chatty = (function(addMessage) {
   addMessage.deleteMessage = function() {
 
   }
-
 
   return addMessage;
 })(Chatty || {});
