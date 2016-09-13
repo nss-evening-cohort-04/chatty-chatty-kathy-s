@@ -1,23 +1,23 @@
 {
-  "messages": [
+  "messages_list": [
     {
-      "id": 1,
+      "id": 0,
       "message": "Hi!"
     },
     {
-      "id": 2,
+      "id": 1,
       "message": "Oh, hello there!"
     },
     {
-      "id": 3,
+      "id": 2,
       "message": "Good to see you again!"
     },
     {
-      "id": 4,
+      "id": 3,
       "message": "You as well!"
     },
     {
-      "id": 5,
+      "id": 4,
       "message": "What are you up to?"
     }
   ]
