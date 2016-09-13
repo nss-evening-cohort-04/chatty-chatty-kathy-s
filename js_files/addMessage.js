@@ -17,9 +17,16 @@ var Chatty = (function(addMessage) {
       container.innerHTML += messageDiv;
     }
   },
-  addMessage.deleteMessage = function() {
-
+  addMessage.userText = function() {
+    var userMessage = document.getElementById("userInput").value;
+    messagesArray.push(userMessage);
+    addMessage.dispalyUserMessage();
+  },
+  addMessage.dispalyUserMessage = function(){
+    messageDiv = "<div>" + messagesArray[messagesArray.length-1] +  "<button class='delete'>Delete</button>" + "</div>";
+    container.innerHTML += messageDiv;
   }
+
 
   return addMessage;
 })(Chatty || {});
