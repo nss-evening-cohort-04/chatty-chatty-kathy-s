@@ -2,8 +2,7 @@ var Chatty = (function() {
 
   function getMessages() {
     var data = JSON.parse(this.responseText);
-    var messagesArray = data.messages;
-    console.log(messagesArray);
+    Chatty.getMessages(data);
   }
 
 
