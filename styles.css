@@ -1,7 +1,17 @@
 body {
   background: skyblue;
+  color: #333;
+}
+
+.darkTheme {
+  background: #333;
+  color: skyblue;
 }
 
 textarea {
   border: 1px solid black;
+}
+
+.largeText {
+	font-size: 3em;
 }
