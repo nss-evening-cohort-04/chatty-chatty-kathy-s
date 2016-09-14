@@ -14,4 +14,5 @@ document.getElementById("userInput").addEventListener("keydown", function(e) {
 
 document.getElementById("clearButton").addEventListener("click", function(){
     document.getElementById("container").innerHTML = "";
+    document.getElementById("clearButton").disabled = true;
 });
