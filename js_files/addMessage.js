@@ -13,7 +13,7 @@ var Chatty = (function(addMessage) {
   },
   addMessage.displayMessages = function() {
     for (var i = 0; i < messagesArray.length; i++) {
-      messageDiv = "<div>" + messagesArray[i] + "<button class='delete'>Delete</button>" + "</div>";
+      messageDiv = "<div>" + messagesArray[i] + "<button class='delete'>Delete</button>" + new Date() + "</div>";
       container.innerHTML += messageDiv;
     }
   },
@@ -23,7 +23,7 @@ var Chatty = (function(addMessage) {
     addMessage.dispalyUserMessage();
   },
   addMessage.dispalyUserMessage = function(){
-    messageDiv = "<div>" + messagesArray[messagesArray.length-1] +  "<button class='delete'>Delete</button>" + "</div>";
+    messageDiv = "<div>" + messagesArray[messagesArray.length-1] + "<button class='delete'>Delete</button>" + new Date() + "</div>";
     container.innerHTML += messageDiv;
   }
 
