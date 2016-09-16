@@ -12,6 +12,10 @@ label {
   color: skyblue;
 }
 
+.darkTheme #container {
+  border-color: white;
+}
+
 .largeText {
 	font-size: 1.5em;
 }
