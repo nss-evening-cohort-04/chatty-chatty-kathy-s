@@ -13,7 +13,7 @@ label {
 }
 
 .darkTheme #container {
-  border-color: white;
+  border-color: skyblue;
 }
 
 .largeText {
@@ -29,8 +29,6 @@ label {
   margin: 1% 2%;
   padding: 1%;
   line-height: 1.8em;
-  overflow-y: auto;
-  height: 100%;
 }
 
 .user {
