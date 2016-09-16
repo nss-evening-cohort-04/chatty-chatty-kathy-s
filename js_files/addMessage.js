@@ -1,39 +1,53 @@
-var Chatty = (function(addMessage) {
+var Chatty = (function(Chatty) {
 
   var messagesArray = [];
   var container = document.getElementById("container");
   var messageDiv;
 
-  addMessage.getMessages = function(data) {
+  Chatty.getMessages = function(data) {
     for (var i = 0; i < 5; i++) {
-      messagesArray.push(data.messages_list[i].message);
+      messagesArray.push(data.messages_list[i]);
     }
-    console.log(messagesArray);
-    addMessage.displayMessages();
+    Chatty.displayMessages();
   },
-  addMessage.displayMessages = function() {
+  Chatty.displayMessages = function() {
     for (var i = 0; i < messagesArray.length; i++) {
       messageDiv = "<div>" +
                      "<button class='delete'>Delete</button>" +
-                      messagesArray[i] +
+                      messagesArray[i].message +
                      "<span class='date'>" + new Date() + "</span>" +
                    "</div>";
       container.innerHTML += messageDiv;
-    }
+      }
+    Chatty.addEvents();
   },
-  addMessage.userText = function() {
+  Chatty.getUserInput = function(event) {
+    event.preventDefault();
+    document.getElementById("clearButton").disabled = false;
+    var assignedID = Math.floor(Math.random() * 1000) + 1;
     var userMessage = document.getElementById("userInput").value;
-    messagesArray.push(userMessage);
-    addMessage.displayUserMessage();
+    document.getElementById("userInput").value = "";
+    Chatty.setUserMessage(assignedID,userMessage);
   },
-  addMessage.displayUserMessage = function(){
+  Chatty.setUserMessage = function(assignedID,userMessage) {
+    var messageObject = {
+      "id": assignedID,
+      "message": userMessage
+    }
+    messagesArray.push(messageObject);
+    Chatty.displayUserMessage();
+  },
+  Chatty.displayUserMessage = function(){
     messageDiv = "<div><button class='delete'>Delete</button>" +
-                    messagesArray[messagesArray.length-1] +
+                    messagesArray[messagesArray.length-1].message +
                     "<span class='date'>" + new Date() + "</span>" +
                  "</div>";
     container.innerHTML += messageDiv;
+  },
+  Chatty.getMessagesArray = function() {
+    return messagesArray;
   }
 
 
-  return addMessage;
+  return Chatty;
 })(Chatty || {});

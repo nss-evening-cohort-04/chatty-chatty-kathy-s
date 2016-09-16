@@ -1,6 +1,6 @@
-var Chatty = (function(removeMessage) {
+var Chatty = (function(Chatty) {
 
-  removeMessage.remove = function (event) {
+  Chatty.remove = function (event) {
     var clicked = event;
     container.removeChild(clicked.parentElement);
     if (document.getElementById("container").innerHTML < 1) {
@@ -8,5 +8,5 @@ var Chatty = (function(removeMessage) {
     }
   }
 
-return removeMessage;
+return Chatty;
 })(Chatty || {});
