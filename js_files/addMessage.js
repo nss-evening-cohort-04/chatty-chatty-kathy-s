@@ -24,10 +24,12 @@ var Chatty = (function(Chatty) {
   Chatty.getUserInput = function(event) {
     event.preventDefault();
     document.getElementById("clearButton").disabled = false;
-    var assignedID = Math.floor(Math.random() * 1000) + 1;
     var userMessage = document.getElementById("userInput").value;
-    document.getElementById("userInput").value = "";
-    Chatty.setUserMessage(assignedID,userMessage);
+    if (userMessage !== "") {
+      var assignedID = Math.floor(Math.random() * 1000) + 1;
+      document.getElementById("userInput").value = "";
+      Chatty.setUserMessage(assignedID,userMessage);
+    }
   },
   Chatty.setUserMessage = function(assignedID,userMessage) {
     var messageObject = {
