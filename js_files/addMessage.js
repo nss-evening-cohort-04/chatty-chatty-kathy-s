@@ -13,17 +13,24 @@ var Chatty = (function(addMessage) {
   },
   addMessage.displayMessages = function() {
     for (var i = 0; i < messagesArray.length; i++) {
-      messageDiv = "<div>" + messagesArray[i] + "<button class='delete'>Delete</button>" + new Date() + "</div>";
+      messageDiv = "<div>" +
+                     "<button class='delete'>Delete</button>" +
+                      messagesArray[i] +
+                     "<span class='date'>" + new Date() + "</span>" +
+                   "</div>";
       container.innerHTML += messageDiv;
     }
   },
   addMessage.userText = function() {
     var userMessage = document.getElementById("userInput").value;
     messagesArray.push(userMessage);
-    addMessage.dispalyUserMessage();
+    addMessage.displayUserMessage();
   },
-  addMessage.dispalyUserMessage = function(){
-    messageDiv = "<div>" + messagesArray[messagesArray.length-1] + "<button class='delete'>Delete</button>" + new Date() + "</div>";
+  addMessage.displayUserMessage = function(){
+    messageDiv = "<div><button class='delete'>Delete</button>" +
+                    messagesArray[messagesArray.length-1] +
+                    "<span class='date'>" + new Date() + "</span>" +
+                 "</div>";
     container.innerHTML += messageDiv;
   }
 

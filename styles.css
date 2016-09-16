@@ -8,10 +8,61 @@ body {
   color: skyblue;
 }
 
-textarea {
-  border: 1px solid black;
-}
-
 .largeText {
 	font-size: 3em;
+}
+
+.container-dad {
+  margin: 0 auto;
+}
+
+#container {
+  border: 1px solid black;
+  margin: 1% 2%;
+  padding: 1%;
+  line-height: 1.8em;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.user {
+  display: flex;
+  margin-top: 1%;
+}
+
+.navbar-form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.checkboxes {
+  margin-top: 1%;
+}
+
+#dark,
+#large {
+  margin: 0 auto;
+}
+
+.delete {
+  font-size: .75em;
+  margin: 0 1%;
+  padding: 0;
+}
+
+.header input {
+  display: flex;
+  margin-left: 2;
+}
+
+.img-circle {
+  width: 10%;
+  height: 10%;
+  display: flex;
+  margin: 1% auto;
+}
+
+.date {
+  font-size: .75em;
+  display: block;
 }
