@@ -3,6 +3,10 @@ body {
   color: #333;
 }
 
+label {
+  font-size: .85em;
+}
+
 .darkTheme {
   background: #333;
   color: skyblue;
