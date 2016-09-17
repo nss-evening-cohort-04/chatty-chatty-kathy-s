@@ -12,7 +12,9 @@ var Chatty = (function(Chatty) {
   },
   Chatty.displayMessages = function() {
     for (var i = 0; i < messagesArray.length; i++) {
-      messageDiv = "<div>" +
+      messageDiv = "<div id='" +
+                    messagesArray[i].id +
+                    "'>" +
                      "<button class='delete'>Delete</button>" +
                       messagesArray[i].message +
                      "<span class='date'>" + new Date() + "</span>" +
@@ -26,21 +28,23 @@ var Chatty = (function(Chatty) {
     document.getElementById("clearButton").disabled = false;
     var userMessage = document.getElementById("userInput").value;
     if (userMessage !== "") {
-      var assignedID = Math.floor(Math.random() * 1000) + 1;
+      var uniqueID = Math.floor(Math.random() * 1000000000) + 1;
       document.getElementById("userInput").value = "";
-      Chatty.setUserMessage(assignedID,userMessage);
+      Chatty.setUserMessage(uniqueID,userMessage);
     }
   },
-  Chatty.setUserMessage = function(assignedID,userMessage) {
+  Chatty.setUserMessage = function(uniqueID,userMessage) {
     var messageObject = {
-      "id": assignedID,
+      "id": uniqueID,
       "message": userMessage
     }
     messagesArray.push(messageObject);
     Chatty.displayUserMessage();
   },
   Chatty.displayUserMessage = function(){
-    messageDiv = "<div><button class='delete'>Delete</button>" +
+    messageDiv = "<div id='" +
+                 messagesArray[messagesArray.length-1].id +
+                 "'><button class='delete'>Delete</button>" +
                     messagesArray[messagesArray.length-1].message +
                     "<span class='date'>" + new Date() + "</span>" +
                  "</div>";
