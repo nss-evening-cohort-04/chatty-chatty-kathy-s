@@ -3,13 +3,21 @@ body {
   color: #333;
 }
 
+label {
+  font-size: .85em;
+}
+
 .darkTheme {
   background: #333;
   color: skyblue;
 }
 
+.darkTheme #container {
+  border-color: skyblue;
+}
+
 .largeText {
-	font-size: 3em;
+  font-size: 1.5em;
 }
 
 .container-dad {
@@ -21,8 +29,7 @@ body {
   margin: 1% 2%;
   padding: 1%;
   line-height: 1.8em;
-  overflow-y: auto;
-  height: 100%;
+  font-family: 'Rubik', sans-serif;
 }
 
 .user {
