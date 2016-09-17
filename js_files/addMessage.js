@@ -49,6 +49,7 @@ var Chatty = (function(Chatty) {
                     "<span class='date'>" + new Date() + "</span>" +
                  "</div>";
     container.innerHTML += messageDiv;
+    container.scrollTop = container.scrollHeight;
   },
   Chatty.getMessagesArray = function() {
     return messagesArray;
