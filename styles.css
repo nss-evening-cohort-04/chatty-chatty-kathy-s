@@ -30,6 +30,8 @@ label {
   padding: 1%;
   line-height: 1.8em;
   font-family: 'Rubik', sans-serif;
+  height: 400px;
+  overflow-y: auto;
 }
 
 .user {
