@@ -1,27 +1,56 @@
 body {
-  background: skyblue;
+  background: url("img/sun.png") #9AD0E6;
+  background-repeat: no-repeat;
+  background-position: right top;
   color: #333;
+  margin: 40px auto;
 }
 
 label {
-  font-size: .85em;
+	font-size: 1.2em;
+	margin-left: 5px;
+}
+
+input[type="checkbox"] {
+  display: inline-block;;
+}
+
+input[type="text"] {
+	padding: 15px;
+	width: 50%;
+	outline: none;
+	border: 1px solid #999;
+	display: block;
+}
+input:focus {
+	background: #eee;
+}
+
+button {
+	border: 1px solid #999;
+	background: #666;
+	color: #fff; 
+	padding: 5px;
+}
+button:hover {
+	background: #333;
+}
+
+#clearButton {
+	margin: 20px 0;
+	font-size: 1.1em;
+	padding: 10px;
 }
 
 .darkTheme {
-  background: #333;
-  color: skyblue;
-}
-
-.darkTheme #container {
-  border-color: skyblue;
+  background: url("img/moon.png") #002040;
+  background-repeat: no-repeat;
+  background-position: right top;
+  color: #ccc;
 }
 
 .largeText {
   font-size: 1.5em;
-}
-
-.container-dad {
-  margin: 0 auto;
 }
 
 #container {
@@ -30,25 +59,22 @@ label {
   padding: 1%;
   line-height: 1.8em;
   font-family: 'Rubik', sans-serif;
+  background: #fff;
+  opacity: .9;
+  color: #333;
 }
 
-.user {
-  display: flex;
-  margin-top: 1%;
+#container button {
+	width: 100px;
 }
 
 .navbar-form {
-  margin: 0 auto;
-  text-align: center;
+  margin: 10px auto;
+  
 }
 
 .checkboxes {
   margin-top: 1%;
-}
-
-#dark,
-#large {
-  margin: 0 auto;
 }
 
 .delete {
@@ -63,13 +89,13 @@ label {
 }
 
 .img-circle {
-  width: 10%;
-  height: 10%;
+  width: 20%;
   display: flex;
-  margin: 1% auto;
+  margin: 2%;
 }
 
 .date {
   font-size: .75em;
   display: block;
+  margin-bottom: 10px;
 }
